@@ -31,7 +31,6 @@ const Education = () => {
                             </TimelineItem>
                         ))}
                     </Timeline>
-
                 </TimelineSection>
             </Wrapper>
         </Container>
