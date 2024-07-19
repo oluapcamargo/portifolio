@@ -6,6 +6,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { education, experiences } from '../../data/constants';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import EducationCard from './Card/EducationCard';
 import {Container, Wrapper, Title, Desc, TimelineSection} from './EducationStyledComponent'
 

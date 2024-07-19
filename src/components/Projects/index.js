@@ -21,16 +21,22 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
           }
           <Divider />
-          {toggle === 'web app' ?
-            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+          {toggle === 'frontend' ?
+            <ToggleButton active value="frontend" onClick={() => setToggle('frontend')}>Frontend</ToggleButton>
             :
-            <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+            <ToggleButton value="frontend" onClick={() => setToggle('frontend')}>Frontend</ToggleButton>
           }
           <Divider />
-          {toggle === 'android app' ?
-            <ToggleButton active value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
+          {toggle === 'backend' ?
+            <ToggleButton active value="backend" onClick={() => setToggle('backend')}>Backend</ToggleButton>
             :
-            <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
+            <ToggleButton value="backend" onClick={() => setToggle('backend')}>Backend</ToggleButton>
+          }
+            <Divider />
+          {toggle === 'fullstack' ?
+            <ToggleButton active value="fullstack" onClick={() => setToggle('fullstack')}>Full Stack</ToggleButton>
+            :
+            <ToggleButton value="fullstack" onClick={() => setToggle('fullstack')}>Full Stack</ToggleButton>
           }
           <Divider />
           {toggle === 'machine learning' ?

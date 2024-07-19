@@ -1,3 +1,7 @@
+import IcareImg from '../images/iCare.png';
+import MoveItImg from '../images/moveit.png';
+import PorfolioImg from '../images/portfolio.png';
+
 export const Bio = {
     name: "Paulo Henrique Camargo",
     roles: [
@@ -278,26 +282,6 @@ export const Bio = {
       ],
       doc: "data:image/png;base64,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",
     }
-    ,
-    {
-      id: 5,
-      img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbUAAABzCAMAAAAosmzyAAAAz1BMVEX///8AAAChAP/m5uarq6vHx8ft7e0xMTFlZWW8vLzDw8P8/Pze3t5oaGgfHx9zc3OlpaVXV1dJSUnz8/PguP/q6upAQEDR0dEYGBiOjo5eXl739/fNzc2zs7N8fHzX19dOTk45OTkTExOWlpaGhoYmJia5Yf9wcHCenp55eXkqKir++P88PDzOiv/57v/v2v/jvf/RlP/rz//crv/oyP/Ie//t0/+zR/+qLP+4Wf/15/+wPv/Bbv+nG/+1Tf+2W//Zp//XnP/y4P/Ojf/Gdv8geC8OAAANbUlEQVR4nO1daXvaOhPFmM1gCMFlBwMGCiTp2723bbrd9v7/3/Qa8KIzkmw5TYP9VOdbkGUtRzMazYycUumvxptnt5fugkZmPCuX33+4dCc0MsJnrVz+59n/Lt0PjSw4sVYuf3z/8tI90VBHwJqPT2/1DlcUxKz5ePHz0t3RUAKwVi7fv710hzQUQFg7Cpw2KXMPnjVtUuYfItaOJqXe4fIMMWs+nr/SJmVuIWXNF7hfWlHmFAmsnQTu0v3TEOHnt0TayuXXeofLIz6/vk/m7dM7vcPlELdvvnxN5O1eC1wu8fltiqb8ogUul/jwIkXgtLMrn3j1PYm275funoYEtz/kpsnzS3dOQ46XMk2pWcs1bl990awVEZ///ahZKxpuP7zXrBUMn1/zlGnWco3bt/9oG7JgeCe0QzRrOcbLF0LNGOLTpfunwSHVE/n83aW7qIG4fZfi9f+oUyXzhp+/EjVjufxN55DkDLc/0qLZv7SY5Q2vUij79OzSPdTgkZjt8/XX50v3T0OEBNa+62ukeYWMta/6QluOIWbt/q1OYM0zRKz99+bSvdJIBsfavb4ymn8Q1vRuVgiwrH3Tu1lBELH29b+XrUt3RkMRAWv3P/R5ukA4sfZFG43FwrPyxx/aaCwaXmox09DQ0MiO1mxx6S5oZERrvjSsS3dCIxNs1/ChWSsQpvOVYWjWCoXFxjMMzVqR4DSXRgzNWiEwvTYMzVrR4Nxp1ooHZ6BZKx40a0WEZq2I0KwVEZq1IiJ/rLWUk1n61e76iPlwqvx2u7LeHNoNdzPeD1XrTK392N01dpvx2qop1mktuqeGDn6l2QPSc+x5d++PzJb0CFlrZn//48H0Z9RtTybtzbqaNlDLrUPHl+v0rjuVNtQxBmPJrDCYjbEhrz1PH8l8gg0t96bwObtbYRCKTIut3iDjso5Pdm/g9W74hnlL+GI6NX22sDKP13wVCmZxo/vGatQTyEb1gAO9cavSSbE3hghrR1rjWGknqjNIJLtVETY0TmzIHIvq9EQN4euXpzk36eA8qLk0ErANO7aHnyek2SqUdmL9gVO0O/9Yc4Opoqw52EqIilDi7Lbw4SPWUlXpiIn2sZTLW7Uuq9SV1um7sjqDGfcwsnZ9HK5oJg7MPEwE5RFWIWtd+LlNxwWl9Zi1K2z29Ns6/JPI2lTMmY9Ol+dN+vARd5LNaiadf0NKwVQ6/z6uxSqvNO8kVNrQRcWx1hKvSEZYnpi1WtwesrZYJfRjSWan1UjqtQ/hrpPItL8viGTaHCTW6QjXh1Siz5gQY4ayJiEtUlZPzprDKGRgbZ480BtMiuglP+1DsB0e0urs+DoLL62SgLYU0nwt2U9irSTcEU+IjPunZY2NLbCs4ftFYPedNEk7gjMVUufSMK5oHVuhIU5JKjTUA7FG1iZWQsWw3pOytmb/ZFgTG2mIeH2maLozqMWkVIko1lrS9hTihjS0Tq9CxBpH31sl1FursFZ/VNZcXLoxa7OkPkSPh0+rCICPWUIXpUAJvU6vYMQzeUZTrSHWkaGyZgOspk/O2gEPAhFrNbUej4PHuf1pMLlq8EYDCJuTZD0K2jhBSTwNpLp2Qwp7m7lpzsb0gOUxOjIDa8ZCYT09LmvEhohYowtne9W1zeGeW0/nHpvk17F57KTDn2rZLZ8rHDW6tt3kJtNgzDuTs0R6m5k9rOy25GdW2MimtrWCQbaGZPTMQUPI2rZ33RMstWBZNbyRDyzyOqMTvMGjskYQskZ3331Y3yQW8HkzQAnYxsblguxCzLxwBIxDG6Ipr0RlehV6EvukpBNv0GRJDRhTxUH5qMfCJmBtNzP98hqTgRWgEXTBNk2THJa6ZojwxX+QNeIDBVMaT7jeyY7sSZ8m2yNjEVKzjvEO9XFerqPJpHq7weg0IrozSUNbsC8dXCDx2YRnLV6KdBMfMOp4mubz/xOsBR4tImp4/sH1ufd/MWHsaKvjKJbRNE9JyzC+BZZFE01swWVCvzbhzy2sQ12+UOhGv3OssadwshQ9VnovwVoga7i1jPHNqHFuuFEgxzj8m6gf5Ai/wTbQRorGjnVGeDDGfi1DFUnPywRQGtkMHGs4KLIfMu6Gp2Vt1x3Gj+BS71AfHU6pTSxrD4+4ZF1GhWjX3BCHEvbAFf56EnMW+MqQUtyIObcaKtaoe4S1BlYiS+4yrA3mSAwqojV5Mzn++B2b9lmg65DYApE7BX8e0zZWbGkoINgvj8ZBUdsFLTnYEOfXxEoRqYQ1olfJ8mEE8elY49z32DIXL+lD8YYWI8j+Fb5sKP45Atg84nOsS+vgAgkIQFmn3hlqWkTvRNY81MV0UIyD9clY495cAxNuyTWM+bUDrhxAjIGQHuw8H4ztV2cxhi3RXPEzwlSZVQNlh/JJlar/UhhspAmRtQH1oKKRewHWKtyLsSq3pOma58sB2FrIGp4fUuQ1AMq4oZaSgpvwptokqMK5eBlWI7Fs2pbswPBUrK34gWKPBQNFG5vUXszH7WupsypkDa1UeQCaBe6nI6U608S8AA6RUAli2SwuzZogaSIpUiwAU9NpTlKCXwFrLfT8yBNRWKAHhrPhhagpOjsDRPOUb9ZGgmBxtuUZszY8UDctj4A1skVJkgYI0EjnAm9C9FNDqIDIc5Jv1kS2RPrcA8L5EWZaUYhZS8ysioCuKbW9kPq1UzAqBmuCCH9JJe7I4FypqbaoxaypZaBq1kIcBCPNplTOrClFi43HZE1g2wqQkbVOcVnLNtATa/JkGIKcs/ZXyVpKNheDx7NGRD3n8fewlnlfq9FIshxi1tQ+XIRamA5YjD4JLqfAKy5r2Y44hiiXYNne7CvWEUQMw/OadNgJwAEvleqQnJFZ30xGSE/xWMPoUaOWMtCSQ1Rqfc5qPCwLWcMzIe9VEwF9I1ulOlN5mD0RxWMNn+Dd5BQk8j0Bp53Ee4xtcIEaRDBnZI9Su3uWEl6ToXisoedomTpCTLQZ4AglrKXuUeDrPCeBpG6GEJUJPF7onuN9/hJciDVUJ5lYQ9nZphp4K3ie3CqSsIZteJxzZHrH12qhtuOitWjKBiNLSUCQ4YlYIzFyMi2ZWCOR2lQDD7c1cvYiseSQNXlc8QyImoa9xwPbhFORsFkGcYQHqdU/yJroOmMMHGEm1oiBx69pAnj6hogNWQJR0BptO05FgtYNJYRsoDQAjmHpYLFNsSF+GoeDXozJI/v8+X0UX7wlQXI8p2RijUQ9BRG4AzPQXjJrJAEjmmmS+k0EGgmIjBWsQ73+YHiMwhHj8qWLm4RNIw36SKzxgUNyEkKjltx8yMYaWdPc+kStQ+aSaEiSDxuxRmSQzCbuYBGlJPEZO4Y7eSS9ZCbo6scElkivPJQ1EoVdps0tzj+ZrGysYVYqfzKCyVuVkiKc9DZFrNVITiHoSOxjdPeLu4XDrlSyDOIjIA7GQ72KaSOyzDp11ugFCe7GN0lzAiVD76NmY40kW1BVhGZQpYQf11uyj3IOynjO6PWkQVRkE0KZ0xx128SWPF0e8ot47DzZOP0NSaUMrNEo47mHdux4oDMS8drnotEZWSPrFp8i/qspx3E0RMEnKZiVznXy2hra/aHF3TpldC53E81bVxd9u7qmnlD23E79qm7YiQV1xcny/DOwxkc/6vXjWovUwh0tbzTtvlObCYLKGVnjErlWVqClHGuFJWteoG4qC9PpLyzRNTyGNdG9Rk/guYbwp+idHUGQgrWJ+EuHA3ffHe+4+WPcQA9mTXbDMWJNcAPP62yF/vesrPEBju1k3V1vrunbjyaj4KLodiVJY2B3FYXL0keAg8xWCyOhD0QpN8KAgNGDWZNd14xYU7xWe0RW1pTvSp7MuAzpQSxrallvxIJVCuWRbBiHkyohWDP9wazJlkhsOCXdBL4Dyy4za0rfNAi3D6U73GeABcddvRWASw9RuOM7orFxWyUACFPxcNYkkxGzRq1IFk0wt7KzpvD9kNhcT7hd1UE/MdrdTupsCvIMUmnzqNOEO8ukt/Rw1iSyxBxS5DvDAV/8ANam6V8biAxlereUQR/Hb2drRBjCSfr4h4+6yN3tyHt4BokG/AZr4p2NYU06W8vS9HdZS//wDqO8apKOdBbkdMeJQVJy10jyUcxFEgU7SXJlou1zR0/Dv8FaaSHKemAdApIl1J4+BmvJJglO6VSoJBsmPZPzymsh3Z130tSt6Vqm8VbyuOdMKtedPXfT43dYK9mClsDhKPzm2Nhv5DFYK5lym/lAvNWlJrcR3py8Smms+dtzQ8CB107MFuh3V4JO3XWTsphbTSFvqz0dSimVNelNqKClLpd7Q4S5Qh84f6USHWzMDVokIi1bfrgTHZC2rmj2q1fs7IcXUK1JI8ZEHGLtz3vQzKgxT0+2G7pAtldX+CDuoosNGfWxuFIVej2mz+wabLEgAjltspPh1V2qNxwgthEQ34IXH+I1eDBGMRRyQc35Nerp7aYqXdG2NV8fJm232xSs35R2qtZ8vGuv59ZMua4zbFpdd+JWrKr6fxU0q/PxoT3ZbSrWUO2CwQNhLqqWNbesmWQF9q3ueDfZuZWZ+tehs6A/s/bueaB8F/4PcS7/lEHRa0kAAAAASUVORK5CYII=",
-      role: "Free lancer",
-      company: "Intelliway",
-      date: "Set 2022 - Present",
-      desc: "Working as a software developer, I have contributed to numerous projects utilizing technologies IA().  One of the most significant projects was LATAM, an integration project where we used a middleware called Tibco.",
-      skills: [
-        { "id": 1, name: "C#"},
-        { "id": 2,  name: "Oracle DB"},
-        { "id": 3,  name: "Java"},
-        { "id": 4,  name: "Sql Server"},
-        { "id": 5,  name: "WSDL"},
-        { "id": 6,  name: "Soap"},
-        { "id": 7,  name: "Tibco"},
-        { "id": 8,  name: "Jms - Java Message Service"}
-      ],
-      doc: "data:image/png;base64,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",
-    }
   ];
   
   export const education = [
@@ -330,39 +314,50 @@ export const Bio = {
   export const projects = [
     {
       id: 1,
-      title: "Card integration with google pay wallet.",
-      date: "Jan 2024 - Present",
+      title: "Customer Support System Development via WhatsApp",
+      date: "Jan 2023 - Jul 2023",
       description:
-        "Creating backend project to integrate cards with google pay wallet. ",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl_kslzW5OU7E1942ievm08_gBtAf23CW0Rg&s",
+        "I developed a customer support system integrating the WhatsApp platform with Meta ,IBM's Watson and Vonage. \\n This system automates initial customer interactions, allowing it to respond to clients without the need for human intervention.",
+      image:    IcareImg   ,
       tags: [
-        { "id": 1, name: "C#"},
-        { "id": 2, name: ".NET 6"},
-        { "id": 3, name:"Azure Devops"},
-        { "id": 4, name:"Event Hub"},
-        { "id": 5, name:"Service Bus"},
-        { "id": 6, name:"CI/CD"},
-        { "id": 7, name:"MongoDb"},
-        { "id": 8, name:"Rest Api"},
-        { "id": 9, name:"DDD"},
-        { "id": 10, name:"Redis"}
+        { "id": 1, name: "NodeJs"},
+        { "id": 2, name: "MongoDb"},
+        { "id": 3, name:"Aws"},
+        { "id": 4, name:"Watson (IBM)"},
+        { "id": 5, name:"Meta Business Suite"},
+        { "id": 6, name:"Vonage"},
       ],
-
       category: "backend"
     },
     {
       id: 2,
-      title: "Card Platform",
-      date: "Dez 2022 - Jan 2024",
+      title: "MoveIt",
+      date: "Nov 2021 - Dez 2021",
       description:
-        "Creating backend project to create cards for our clients. The project get all information from ",
+        "I developed this project to gain more knowledge about Next.js and enhance my skills in the frontend environment. By working on this, I aimed to deepen my understanding of modern web development practices and improve my ability to create efficient, user-friendly applications. ",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrrAQX6K2YDuto4e8w_qPGvIzyBeGChou3fO-BhspLCBmrfFsMKiwShtGGAp8zKbUf5hA&usqp=CAU",
+      MoveItImg,
       tags: [ 
-        { "id": 1, name: "C#"},
-        { "id": 2, name: ".NET 6"},
-        { "id": 3, name:"Azure Devops"},
+        { "id": 1, name: "NodeJs"},
+        { "id": 2, name: "NextJs"},
+        { "id": 3, name:"Vercel"},
+        { "id": 4, name:"TypeScript"},
+        { "id": 5, name:"CSS"}
+      ],
+      category: "fullstack"      
+    },
+    {
+      id: 3,
+      title: "PortFolio",
+      date: "Mai 2024 - Present",
+      description:
+        "I developed my portfolio site using React to leverage modern technology and component-based architecture, demonstrating my skills in a professional and flexible manner. This project offered a valuable learning opportunity, allowing me to deepen my React knowledge while creating a polished presentation of my work to impress potential employers and clients.",
+      image:
+      PorfolioImg,
+      tags: [ 
+        { "id": 1, name: "NodeJs"},
+        { "id": 2, name: "React"},
+        { "id": 3, name:"CSS"},
         { "id": 4, name:"Event Hub"},
         { "id": 5, name:"Service Bus"},
         { "id": 6, name:"CI/CD"},
@@ -371,7 +366,7 @@ export const Bio = {
         { "id": 9, name:"DDD"},
         { "id": 10, name:"Redis"}
       ],
-      category: "backend"      
+      category: "frontend"      
     }
   ];
   
