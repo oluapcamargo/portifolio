@@ -1,6 +1,7 @@
 {
   "short_name": "Paulo Camargo",
   "name": "Portfolio - Paulo Henrique Camargo",
+  "description": "A portfolio project to showcase my skills.",
   "icons": [
     {
       "src": "favicon.ico",
