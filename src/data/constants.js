@@ -326,6 +326,8 @@ export const Bio = {
         { "id": 4, name:"Watson (IBM)"},
         { "id": 5, name:"Meta Business Suite"},
         { "id": 6, name:"Vonage"},
+        { "id": 7, name:"HTML"},
+        { "id": 8, name:"Angular"}
       ],
       category: "backend"
     },
@@ -342,7 +344,8 @@ export const Bio = {
         { "id": 2, name: "NextJs"},
         { "id": 3, name:"Vercel"},
         { "id": 4, name:"TypeScript"},
-        { "id": 5, name:"CSS"}
+        { "id": 5, name:"CSS"},
+        { "id": 6, name:"HTML"}
       ],
       category: "fullstack"      
     },
@@ -359,7 +362,8 @@ export const Bio = {
         { "id": 2, name: "Git"},
         { "id": 3, name:"CSS"},
         { "id": 4, name:"TypeScript"},
-        { "id": 5, name:"GitHub"}
+        { "id": 5, name:"GitHub"},
+        { "id": 6, name:"HTML"}
       ],
       category: "frontend"      
     }
