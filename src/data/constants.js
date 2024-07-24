@@ -355,16 +355,11 @@ export const Bio = {
       image:
       PorfolioImg,
       tags: [ 
-        { "id": 1, name: "NodeJs"},
-        { "id": 2, name: "React"},
+        { "id": 1, name: "React"},
+        { "id": 2, name: "Git"},
         { "id": 3, name:"CSS"},
-        { "id": 4, name:"Event Hub"},
-        { "id": 5, name:"Service Bus"},
-        { "id": 6, name:"CI/CD"},
-        { "id": 7, name:"MongoDb"},
-        { "id": 8, name:"Rest Api"},
-        { "id": 9, name:"DDD"},
-        { "id": 10, name:"Redis"}
+        { "id": 4, name:"TypeScript"},
+        { "id": 5, name:"GitHub"}
       ],
       category: "frontend"      
     }
