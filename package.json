@@ -1,7 +1,7 @@
 {
   "name": "portifolio-project",
   "version": "0.1.0",
-  "homepage": "https://paulocamargo.dev.br",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
