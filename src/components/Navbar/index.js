@@ -1,15 +1,27 @@
-import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu,  MobileLink } from './NavbarStyledComponent'
+import React ,{ useEffect, useState }from 'react'
+import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu,  MobileLink, LinkedinButton } from './NavbarStyledComponent'
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
-import { Bio } from '../../data/constants';
+import BioService from "../../services/bio.service.js";
 import { useTheme } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme()
+    const [isOpen, setIsOpen] = useState(false);
+    const theme = useTheme()
+    const [bio, setBio] = useState(null);
+useEffect(() => {
+    async function loadBio() {
+      const bios = await BioService.getAllBio();
+      setBio(bios[0]); // pega o primeiro bio
+    }
+
+    loadBio();
+  }, []);
+
+    if (!bio) return null;
+
   return (
     <Nav>
       <NavbarContainer>
@@ -30,7 +42,8 @@ const Navbar = () => {
           <NavLink href='#education'>Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
+          <GitHubButton href={bio.github} target="_blank">Github Profile</GitHubButton>
+          <LinkedinButton href={bio.linkedin} target="_blank">Linkedin Profile</LinkedinButton>
         </ButtonContainer>
       </NavbarContainer>
       {
@@ -51,7 +64,8 @@ const Navbar = () => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={bio.github} target="_blank">Github Profile</GitHubButton>
+            <LinkedinButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={bio.linkedin} target="_blank">Linkedin Profile</LinkedinButton>
           </MobileMenu>
         )
       }

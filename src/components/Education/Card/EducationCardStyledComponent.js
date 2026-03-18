@@ -4,7 +4,7 @@ export const Document = styled.img`
     display: none;
     height: 70px;
     width: fit-content;
-    background-color: #000;
+    background-color: #ffffff;
     border-radius: 10px;
     &:hover{
         cursor: pointer;
@@ -74,7 +74,7 @@ export const Top = styled.div`
 
 export const Image = styled.img`
     height: 50px;
-    background-color: #000;
+    background-color: #ffffff;
     border-radius: 10px;
     margin-top: 4px;
     @media only screen and (max-width: 768px){

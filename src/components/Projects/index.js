@@ -1,12 +1,24 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useEffect, useState } from "react";
 import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectsStyledComponent'
 import ProjectCard from './Card/ProjectCards'
-import { projects } from '../../data/constants'
+import ProjectService from "../../services/project.service.js";
 
 
 const Projects = ({openModal,setOpenModal}) => {
+
   const [toggle, setToggle] = useState('all');
+  const [projectsData, setprojects] = useState(null);
+
+  useEffect(() => {
+    async function loadSkill() {
+      const projectsList = await ProjectService.getAllProject();
+      setprojects(projectsList); 
+    }
+    loadSkill();
+  }, []);
+
+    if (!projectsData) return null;
+
   return (
     <Container id="projects">
       <Wrapper>
@@ -46,11 +58,11 @@ const Projects = ({openModal,setOpenModal}) => {
           }
         </ToggleButtonGroup>
         <CardContainer>
-          {toggle === 'all' && projects
+          {toggle === 'all' && projectsData
             .map((project) => (
               <ProjectCard key={project.id} project={project} openModal={openModal} setOpenModal={setOpenModal}/>
             ))}
-          {projects
+          {projectsData
             .filter((item) => item.category === toggle)
             .map((project) => (
               <ProjectCard key={project.id} project={project} openModal={openModal} setOpenModal={setOpenModal}/>

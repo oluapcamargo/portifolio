@@ -33,6 +33,7 @@ function App() {
           <Projects/>
           <Education/>
           </Wrapper>
+
       </Body>
     </Router> 
       

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import styled from 'styled-components'
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -7,7 +7,8 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import ExperienceCard from './Card/ExperienceCard';
-import { experiences } from '../../data/constants';
+// import { experiences } from '../../data/constants';
+import ExperienceService from "../../services/experience.service.js";
 
 const Container = styled.div`
     display: flex;
@@ -71,7 +72,19 @@ const TimelineSection = styled.div`
     gap: 12px;
 `;
 
-const index = () => {
+const Experience = () => {
+
+const [experienceData, setExperience] = useState(null);
+useEffect(() => {
+    async function loadExperience() {
+      const experiences = await ExperienceService.getAllExperience();
+      setExperience(experiences); // pega o primeiro bio
+    }
+    loadExperience();
+  }, []);
+
+    if (!experienceData) return null;
+
     return (
         <Container id="experience">
             <Wrapper>
@@ -81,11 +94,11 @@ const index = () => {
                 </Desc>
                 <TimelineSection>
                     <Timeline>
-                        {experiences.map((experience,index) => (
+                        {experienceData.map((experience,index) => (
                             <TimelineItem key={experience.id}>
                                 <TimelineSeparator>
                                     <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
+                                    {index !== experienceData.length  && <TimelineConnector style={{ background: '#854CE6' }} />}
                                 </TimelineSeparator>
                                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                                     <ExperienceCard experience={experience}/>
@@ -99,4 +112,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Experience
