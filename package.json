@@ -57,8 +57,5 @@
   },
   "resolutions": {
     "typescript": ">=4.3.5"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.1.1"
   }
 }
