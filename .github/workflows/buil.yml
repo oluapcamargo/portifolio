@@ -25,9 +25,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps
-
-      - name: Debug env
-        run: cat .env
   
       - name: Create .env
         run: |
@@ -38,6 +35,9 @@ jobs:
           echo "REACT_APP_FIREBASE_MESSAGING_SENDER_ID=${{ secrets.REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}" >> .env
           echo "REACT_APP_FIREBASE_APP_ID=${{ secrets.REACT_APP_FIREBASE_APP_ID }}" >> .env
 
+      - name: Debug env
+        run: cat .env
+        
       - name: Build web
         run: npm run build
 
